@@ -1,0 +1,130 @@
+# ─────────────────────────────────────────────
+#  User environment
+# ─────────────────────────────────────────────
+- name: VM1 Initialization
+  hosts:
+    - vm1
+  become: true
+
+  tasks:
+    - name: Install tools
+      ansible.builtin.apt:
+        name:
+          - python3
+          - python3-pip
+          - pipx
+          - nodejs
+          - npm
+          - git
+          - wget
+          - curl
+          - jq
+          - unzip
+          - zip
+          - build-essential
+          - firefox
+          - chromium
+          - libimage-exiftool-perl
+          - ffmpeg
+          - imagemagick
+        state: present
+        update_cache: 'yes'
+
+  roles:
+    - role: user-access
+      user_access_username: user
+      user_access_password: Password123
+      user_access_sudo: true
+
+# ─────────────────────────────────────────────
+#  Server machine
+# ─────────────────────────────────────────────
+- name: VM2 Initialization
+  hosts:
+    - vm2
+  become: true
+
+  tasks:
+    - name: Install tools
+      ansible.builtin.apt:
+        name:
+          - python3
+          - python3-pip
+          - pipx
+          - nodejs
+          - npm
+          - git
+          - wget
+          - curl
+          - jq
+          - unzip
+          - zip
+          - rsync
+          - build-essential
+          - apache2
+          - php
+          - libapache2-mod-php
+          - php-fpm
+          - php-cli
+          - openssh-server
+          - cron
+          - sqlite3
+          - openssl
+          - net-tools
+          - dnsutils
+        state: present
+        update_cache: 'yes'
+
+    # ── OSINT lab websites (Modules 4 & 8) ──
+    # Sites are reachable only by path:
+    #   Module 4: /chirp/, /agora/, /aif2024/
+    #   Module 8 capstone: /case/  (dossier entry = /case/index.html)
+    # The web root has no index page and directory listing is disabled,
+    # so hitting the bare IP returns 403 and does not reveal the sites.
+    # /case/ has its own index.html, so it serves normally under that path.
+    - name: Remove default Apache landing page
+      ansible.builtin.file:
+        path: /var/www/html/index.html
+        state: absent
+
+    - name: Deploy OSINT lab websites to Apache document root
+      ansible.builtin.copy:
+        src: files/website/
+        dest: /var/www/html/
+        owner: www-data
+        group: www-data
+        mode: '0644'
+        directory_mode: '0755'
+
+    - name: Disable directory listing on the web root
+      ansible.builtin.copy:
+        dest: /etc/apache2/conf-available/no-indexes.conf
+        owner: root
+        group: root
+        mode: '0644'
+        content: |
+          <Directory /var/www/html>
+              Options -Indexes
+          </Directory>
+
+    - name: Enable the no-indexes Apache config
+      ansible.builtin.command: a2enconf no-indexes
+      args:
+        creates: /etc/apache2/conf-enabled/no-indexes.conf
+
+    - name: Ensure Apache is enabled and running
+      ansible.builtin.service:
+        name: apache2
+        state: started
+        enabled: true
+
+    - name: Reload Apache to apply configuration
+      ansible.builtin.service:
+        name: apache2
+        state: reloaded
+
+  roles:
+    - role: user-access
+      user_access_username: user
+      user_access_password: Password123
+      user_access_sudo: true

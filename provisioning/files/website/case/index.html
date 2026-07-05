@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meridian Analytics — Candidate Due-Diligence Case</title>
+<link rel="stylesheet" href="dossier.css">
+</head>
+<body>
+<div class="topbar"><div class="inner">
+  <span class="logo">◈ MERIDIAN ANALYTICS</span>
+  <span class="tag">Threat Intelligence · Analyst Workbench</span>
+</div></div>
+
+<div class="wrap">
+
+  <div class="card">
+    <h1>Capstone Case — Candidate Due Diligence</h1>
+    <p class="muted">Internal memo · Talent Acquisition → Analyst Team · Case ref: MA-VET-0619</p>
+    <p>We are close to making an offer for the open <strong>Threat Intelligence Analyst</strong>
+    role. Because this position touches sensitive client work, policy requires an open-source
+    due-diligence check on the finalist before we proceed.</p>
+    <p>The candidate is <strong>Daniel Vos</strong>. His application email, photo and the public
+    profiles he gave us are collected below. Please run a standard OSINT review and report back.</p>
+    <div class="warn"><strong>Your tasking:</strong> Confirm whether this candidate is who he
+    claims to be. Is the identity <em>genuine</em>, or is there reason for concern? Give us your
+    reasoning and how confident you are in each finding.</div>
+  </div>
+
+  <div class="card">
+    <h2>What the candidate claims</h2>
+    <div class="overflow"><table>
+      <tr><th>Name</th><td>Daniel Vos</td></tr>
+      <tr><th>Location</th><td>Amsterdam, Netherlands</td></tr>
+      <tr><th>Background</th><td>Security professional / independent IT contractor, 10+ years</td></tr>
+      <tr><th>Most recent role</th><td>Security Contractor, Northwind Security BV (Amsterdam)</td></tr>
+      <tr><th>Email</th><td>daniel.vos.sec@protonmail.com</td></tr>
+      <tr><th>Username</th><td>dvos_sec</td></tr>
+    </table></div>
+  </div>
+
+  <div class="card">
+    <h2>Provided starting points</h2>
+    <p class="muted">These four items are what HR received. Everything else you must discover.</p>
+    <div class="evidence">
+      <a href="files/application.eml" download>
+        <span class="k">✉︎ The application email</span>
+        <span class="d">Raw message (.eml) — download and inspect the full headers</span></a>
+      <a href="files/daniel_vos_profile.jpg" download>
+        <span class="k">🖼 The profile photo</span>
+        <span class="d">His headshot — analyse it as an image file</span></a>
+      <a href="exhibits/username_search.html">
+        <span class="k">👤 The username</span>
+        <span class="d">dvos_sec — see where it appears across platforms</span></a>
+      <a href="exhibits/linkedout.html">
+        <span class="k">🌐 The social / professional account</span>
+        <span class="d">His LinkedOut profile — start here and pivot</span></a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Case dossier — everything on file</h2>
+    <div class="evidence">
+      <a href="files/application.eml" download><span class="k">application.eml</span><span class="d">The application email</span></a>
+      <a href="files/daniel_vos_cv.html"><span class="k">CV — Daniel Vos</span><span class="d">Attached curriculum vitae</span></a>
+      <a href="files/daniel_vos_profile.jpg" download><span class="k">profile photo</span><span class="d">Candidate headshot (image file)</span></a>
+      <a href="exhibits/username_search.html"><span class="k">Username results</span><span class="d">dvos_sec across platforms</span></a>
+      <a href="exhibits/linkedout.html"><span class="k">LinkedOut</span><span class="d">Professional profile</span></a>
+      <a href="exhibits/github.html"><span class="k">Code profile</span><span class="d">dvos-sec</span></a>
+      <a href="exhibits/chirp.html"><span class="k">Chirp feed</span><span class="d">@dvos_sec social posts</span></a>
+      <a href="exhibits/serp.html"><span class="k">Web search</span><span class="d">Search the web for his details</span></a>
+    </div>
+    <p class="muted">Tip: not every profile you find with this name is the same person.</p>
+  </div>
+
+  <div class="card">
+    <h2>Investigation questions</h2>
+    <p class="muted">Use these to structure your work. They are deliberately broad — you decide
+    which evidence answers each one. Your graded deliverable is the report, not these answers.</p>
+    <ol class="q">
+      <li><span class="qh">The application email.</span> Is its stated origin consistent with the
+        claimed identity and location? <span class="clueref">[email headers]</span></li>
+      <li><span class="qh">The profile photo.</span> Is it authentic and original to the
+        candidate? <span class="clueref">[reverse image search · metadata]</span></li>
+      <li><span class="qh">The username / identity trail.</span> Does everything using this name
+        belong to one consistent, real person? <span class="clueref">[username correlation]</span></li>
+      <li><span class="qh">The social &amp; professional footprint.</span> What does the shape and
+        age of his accounts tell you? <span class="clueref">[behavioural · cross-platform]</span></li>
+      <li><span class="qh">His own claims vs. the public record.</span> Do the CV and the content
+        he posts hold up? <span class="clueref">[search · geolocation]</span></li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Deliverable — Intelligence Report</h2>
+    <p>Produce a short <strong>intelligence report</strong> (not just answers) containing:</p>
+    <ul>
+      <li>Your <strong>findings</strong>, each with supporting <strong>evidence (screenshots)</strong>.</li>
+      <li>A <strong>confidence level</strong> for every finding — <span class="pill">Low</span>
+        <span class="pill">Medium</span> <span class="pill">High</span> — <em>with reasoning</em>.</li>
+      <li>An overall <strong>verdict</strong>: is the identity genuine or misleading?</li>
+      <li>A short <strong>OPSEC note</strong> — the precautions you took during the investigation.</li>
+    </ul>
+    <p class="muted">A report template is provided separately by your instructor
+      (<code>report_template.md</code>).</p>
+    <div class="warn"><strong>Confidence reminder:</strong> one matching detail is a coincidence,
+      not a confirmation. Rate <em>High</em> only when independent sources agree.</div>
+  </div>
+
+  <div class="footer">CADMUS-BTCMP-18 · Module 8 — Capstone Investigation · fictional scenario for training use only</div>
+</div>
+</body>
+</html>

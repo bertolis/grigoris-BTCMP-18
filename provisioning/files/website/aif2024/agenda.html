@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Full two-day agenda — Athens Infosec Forum 2024, Zappeion Megaron, Nov 6–7.">
+  <title>Agenda — Athens Infosec Forum 2024</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .day { display: none; }
+    .day.show { display: block; }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <a class="brand" href="index.html">
+      <span class="logo">A</span>
+      <span>Athens Infosec Forum <small>ZAPPEION · NOV 6–7, 2024</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="agenda.html" class="active">Agenda</a>
+      <a href="speakers.html">Speakers</a>
+      <a href="venue.html">Venue</a>
+      <a href="index.html#register" class="nav-cta">Register</a>
+    </nav>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Schedule</div>
+      <h2>Two days, three tracks</h2>
+      <p>All sessions take place at the Zappeion Megaron. Times are EET (Athens). Agenda subject to minor changes.</p>
+    </div>
+
+    <div class="day-tabs">
+      <button class="day-tab active" onclick="showDay('d1', this)">Day 1 · Wed Nov 6</button>
+      <button class="day-tab" onclick="showDay('d2', this)">Day 2 · Thu Nov 7</button>
+    </div>
+
+    <div id="d1" class="day show">
+      <div class="schedule">
+        <div class="slot"><div class="time">08:30</div><div class="what"><h4>Registration &amp; coffee</h4><div class="track">Main hall foyer</div></div></div>
+        <div class="slot keynote"><div class="time">09:30</div><div class="what"><h4>Opening keynote — The State of Threat Intelligence in SE Europe</h4><div class="track">Keynote · Main Hall</div><div class="who">Dr. Eleni Papadaki</div></div></div>
+        <div class="slot"><div class="time">10:45</div><div class="what"><h4>Tracking commodity loaders across the Balkans</h4><div class="track">Threat Intelligence · Hall A</div><div class="who">Nikos Vlachos</div></div></div>
+        <div class="slot"><div class="time">10:45</div><div class="what"><h4>Modern red-team tradecraft in 2024</h4><div class="track">Offensive Security · Hall B</div><div class="who">Markos Antoniou</div></div></div>
+        <div class="slot"><div class="time">12:00</div><div class="what"><h4>GDPR engineering: from policy to pipeline</h4><div class="track">Privacy &amp; Compliance · Hall C</div><div class="who">Sophia Reyes</div></div></div>
+        <div class="slot"><div class="time">13:00</div><div class="what"><h4>Lunch &amp; OSINT village</h4><div class="track">East wing</div></div></div>
+        <div class="slot keynote"><div class="time">14:30</div><div class="what"><h4>PANEL — Threat intelligence in the real world</h4><div class="track">Threat Intelligence · Main Hall</div><div class="who">Papadaki · Vlachos · Kovač · moderated</div></div></div>
+        <div class="slot"><div class="time">15:45</div><div class="what"><h4>OSINT for CTI teams: a practitioner's workflow</h4><div class="track">Threat Intelligence · Hall A</div><div class="who">Anna Kovač</div></div></div>
+        <div class="slot"><div class="time">15:45</div><div class="what"><h4>Breaking cloud IAM the lazy way</h4><div class="track">Offensive Security · Hall B</div><div class="who">Lena Fischer</div></div></div>
+        <div class="slot"><div class="time">17:00</div><div class="what"><h4>Day 1 close &amp; networking reception</h4><div class="track">Main hall foyer</div></div></div>
+      </div>
+    </div>
+
+    <div id="d2" class="day">
+      <div class="schedule">
+        <div class="slot"><div class="time">09:00</div><div class="what"><h4>Coffee</h4><div class="track">Main hall foyer</div></div></div>
+        <div class="slot keynote"><div class="time">09:30</div><div class="what"><h4>Keynote — Adversary emulation at scale</h4><div class="track">Keynote · Main Hall</div><div class="who">Dr. Tariq Mansour</div></div></div>
+        <div class="slot"><div class="time">10:45</div><div class="what"><h4>Exploit development: a 2024 refresher</h4><div class="track">Offensive Security · Hall B</div><div class="who">Markos Antoniou</div></div></div>
+        <div class="slot keynote"><div class="time">12:00</div><div class="what"><h4>PANEL — Privacy &amp; compliance for Greek organisations</h4><div class="track">Privacy &amp; Compliance · Hall C</div><div class="who">Reyes · Andreou · panel</div></div></div>
+        <div class="slot"><div class="time">13:00</div><div class="what"><h4>Lunch &amp; CTF finals</h4><div class="track">East wing</div></div></div>
+        <div class="slot"><div class="time">14:30</div><div class="what"><h4>Data protection for startups</h4><div class="track">Privacy &amp; Compliance · Hall C</div><div class="who">Giorgos Andreou</div></div></div>
+        <div class="slot"><div class="time">15:45</div><div class="what"><h4>Student lightning talks</h4><div class="track">Community · Hall A</div></div></div>
+        <div class="slot keynote"><div class="time">16:45</div><div class="what"><h4>Closing remarks &amp; CTF awards</h4><div class="track">Main Hall</div></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div><strong style="color:#cdd9ee;">Athens Infosec Forum 2024</strong><br>Zappeion Megaron · November 6–7, 2024 · athensinfosecforum.gr</div>
+    <div class="disclaimer">Fictional event created for the CADMUS-BTCMP-18 OSINT training lab. Not a real conference; all details are invented for educational use.</div>
+  </div>
+</footer>
+
+<script>
+  function showDay(id, btn) {
+    document.querySelectorAll('.day').forEach(d => d.classList.remove('show'));
+    document.getElementById(id).classList.add('show');
+    document.querySelectorAll('.day-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

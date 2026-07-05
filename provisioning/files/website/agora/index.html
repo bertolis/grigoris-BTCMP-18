@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="d.kira">
+  <title>d.kira — Agora</title>
+  <!-- Agora v2.9.4 | guest | user:d.kira | profile_locale:el -->
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #DAE0E6;
+      color: #1C1C1C;
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    .nav {
+      background: white;
+      border-bottom: 1px solid #EDEFF1;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      height: 48px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      font-size: 20px;
+      font-weight: 900;
+      color: #FF4500;
+    }
+    .nav-logo span { color: #1C1C1C; }
+    .nav-back {
+      color: #878A8C;
+      font-size: 13px;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    .nav-back:hover { color: #FF4500; }
+
+    /* LAYOUT */
+    .page { max-width: 980px; margin: 0 auto; padding: 20px 16px; display: flex; gap: 24px; }
+    .main { flex: 1; min-width: 0; }
+    .sidebar { width: 280px; flex-shrink: 0; }
+
+    /* PROFILE CARD (sidebar) */
+    .profile-card {
+      background: white;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .profile-banner {
+      height: 60px;
+      background: linear-gradient(135deg, #FF4500, #FF6534);
+    }
+    .profile-body { padding: 12px 16px; }
+    .profile-avatar-row { display: flex; align-items: flex-end; gap: 10px; margin-top: -20px; margin-bottom: 10px; }
+    .profile-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: #FF4500;
+      border: 3px solid white;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; font-weight: 700; color: white;
+    }
+    .profile-name { font-size: 16px; font-weight: 700; }
+    .profile-handle { font-size: 13px; color: #878A8C; }
+    .profile-bio { font-size: 13px; margin-top: 8px; line-height: 1.5; color: #1C1C1C; }
+    .profile-stats { display: flex; gap: 16px; margin-top: 12px; border-top: 1px solid #EDEFF1; padding-top: 12px; }
+    .ps-item { text-align: center; }
+    .ps-num { font-size: 15px; font-weight: 700; }
+    .ps-label { font-size: 11px; color: #878A8C; }
+
+    /* TABS */
+    .tabs { display: flex; background: white; border-radius: 4px; overflow: hidden; margin-bottom: 16px; border: 1px solid #EDEFF1; }
+    .tab {
+      padding: 12px 16px; font-size: 14px; font-weight: 700;
+      color: #878A8C; cursor: pointer; border-bottom: 2px solid transparent;
+    }
+    .tab.active { color: #FF4500; border-bottom-color: #FF4500; }
+
+    /* POST CARD */
+    .post-card {
+      background: white;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      border: 1px solid transparent;
+      overflow: hidden;
+    }
+    .post-card:hover { border-color: #EDEFF1; }
+    .vote-col {
+      float: left;
+      width: 40px;
+      background: #F8F9FA;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 0;
+      gap: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #878A8C;
+    }
+    .vote-arrow { font-size: 16px; cursor: pointer; }
+    .vote-arrow.up:hover { color: #FF4500; }
+    .vote-arrow.down:hover { color: #7193FF; }
+    .vote-count { color: #1C1C1C; }
+    .post-main { margin-left: 40px; padding: 8px 10px; }
+    .post-sub { font-size: 12px; color: #878A8C; margin-bottom: 4px; }
+    .post-sub a { color: #878A8C; text-decoration: none; font-weight: 700; }
+    .post-sub a:hover { text-decoration: underline; }
+    .post-title { font-size: 18px; font-weight: 700; line-height: 1.3; margin-bottom: 6px; color: #1C1C1C; }
+    .post-title:hover { color: #0079D3; cursor: pointer; }
+    .post-body-text { font-size: 14px; line-height: 1.6; color: #3C3C3C; margin-bottom: 8px; }
+    .post-meta { font-size: 12px; color: #878A8C; margin-top: 6px; }
+    .post-actions-row { display: flex; gap: 2px; margin-top: 4px; }
+    .post-action {
+      padding: 6px 8px; border-radius: 2px;
+      font-size: 12px; font-weight: 700;
+      color: #878A8C; cursor: pointer;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .post-action:hover { background: #F8F9FA; color: #1C1C1C; }
+
+    /* COMMENT CARD */
+    .comment-card {
+      background: white;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      padding: 12px 16px;
+      border: 1px solid #EDEFF1;
+    }
+    .comment-header { font-size: 12px; color: #878A8C; margin-bottom: 6px; }
+    .comment-header a { color: #0079D3; text-decoration: none; font-weight: 700; }
+    .comment-header a:hover { text-decoration: underline; }
+    .comment-context {
+      background: #F8F9FA;
+      border-left: 4px solid #EDEFF1;
+      padding: 8px 12px;
+      margin-bottom: 8px;
+      border-radius: 0 4px 4px 0;
+      font-size: 13px;
+      color: #878A8C;
+    }
+    .comment-context .ctx-title { font-weight: 700; color: #1C1C1C; margin-bottom: 2px; }
+    .comment-text { font-size: 14px; line-height: 1.6; }
+    .comment-meta { font-size: 12px; color: #878A8C; margin-top: 8px; }
+    .upvote-count { color: #FF4500; font-weight: 700; }
+
+    /* SIDEBAR INFO */
+    .info-card {
+      background: white;
+      border-radius: 4px;
+      padding: 16px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #3C3C3C;
+    }
+    .info-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+
+    .clearfix::after { content: ""; display: table; clear: both; }
+
+    /* INLINE COMMENTS */
+    .post-comments { border-top: 1px solid #EDEFF1; padding: 8px 10px 4px; }
+    .c-item { padding: 7px 0; border-bottom: 1px solid #F8F9FA; font-size: 13px; }
+    .c-item:last-child { border-bottom: none; }
+    .c-user { font-weight: 700; color: #0079D3; font-size: 12px; margin-bottom: 2px; }
+    .c-body { color: #3C3C3C; line-height: 1.5; }
+    .c-votes { color: #878A8C; font-size: 11px; margin-top: 3px; }
+  </style>
+</head>
+<body>
+
+<div class="nav">
+  <span class="nav-logo">Ag<span>ora</span></span>
+  <a class="nav-back" href="../index.html">← Back to Lab</a>
+</div>
+
+<div class="page">
+<div class="main">
+
+  <div class="tabs">
+    <div class="tab active">Posts</div>
+    <div class="tab">Comments</div>
+    <div class="tab">Saved</div>
+  </div>
+
+  <div class="post-card">
+    <div class="clearfix">
+      <div class="vote-col">
+        <span class="vote-arrow up">▲</span>
+        <span class="vote-count">24</span>
+        <span class="vote-arrow down">▼</span>
+      </div>
+      <div class="post-main">
+        <div class="post-sub">Posted by <a>d.kira</a> in <a>r/athens_eats</a> · Sep 9, 2024</div>
+        <div class="post-title">Best lunch spots around Dexameni square? Just started a new job in the area</div>
+        <div class="post-body-text">
+          Hey everyone! Just started a part-time gig with a digital agency just off Dexameni square and I'm completely clueless about where to eat around there. Budget is roughly €8–12. Souvlaki, salads, anything really — ideally within a 10 min walk. Thanks in advance!
+        </div>
+        <div class="post-actions-row">
+          <span class="post-action">💬 18 comments</span>
+          <span class="post-action">⇈ Share</span>
+          <span class="post-action">🔖 Save</span>
+        </div>
+        <div class="post-comments">
+          <div class="c-item">
+            <div class="c-user">throwaway_athenian</div>
+            <div class="c-body">Kalamakia on Kanari St — full wrap + fries for around €10. Tiny spot but they move fast at lunch rush</div>
+            <div class="c-votes">▲ 12 · 3h ago</div>
+          </div>
+          <div class="c-item">
+            <div class="c-user">athens_foodie_gr</div>
+            <div class="c-body">The bakery on Tsakalof does great salads and sandwiches, under €8. Way less crowded than the souvlaki spots at noon</div>
+            <div class="c-votes">▲ 8 · 2h ago</div>
+          </div>
+          <div class="c-item">
+            <div class="c-user">pita_hunter_gr</div>
+            <div class="c-body">Seconding Kalamakia. There's also a Lebanese wrap place two blocks north that is criminally underrated</div>
+            <div class="c-votes">▲ 5 · 1h ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="clearfix">
+      <div class="vote-col">
+        <span class="vote-arrow up">▲</span>
+        <span class="vote-count">67</span>
+        <span class="vote-arrow down">▼</span>
+      </div>
+      <div class="post-main">
+        <div class="post-sub">Posted by <a>d.kira</a> in <a>r/athens</a> · Oct 22, 2024</div>
+        <div class="post-title">Victoria station morning rush — anyone else losing their mind?</div>
+        <div class="post-body-text">
+          The platform at Victoria around 8am is genuinely one of the most stressful experiences I have had. Packed every single day this month. Is there any way to beat the rush? I need to be somewhere by 8:45 so I can't really shift my timing much. Considering cycling as an alternative but the streets scare me.
+        </div>
+        <div class="post-actions-row">
+          <span class="post-action">💬 43 comments</span>
+          <span class="post-action">⇈ Share</span>
+          <span class="post-action">🔖 Save</span>
+        </div>
+        <div class="post-comments">
+          <div class="c-item">
+            <div class="c-user">metro_survivor</div>
+            <div class="c-body">Getting on 10 min earlier genuinely helps — around 7:45 it's noticeably less packed. After 8 it's chaos until 9:30</div>
+            <div class="c-votes">▲ 34 · 6h ago</div>
+          </div>
+          <div class="c-item">
+            <div class="c-user">cycling_athens</div>
+            <div class="c-body">The route through Alexandras Ave is manageable once you know it — about 20 min from central Athens to the Dexameni area. Streets look scarier than they are</div>
+            <div class="c-votes">▲ 11 · 4h ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="clearfix">
+      <div class="vote-col">
+        <span class="vote-arrow up">▲</span>
+        <span class="vote-count">112</span>
+        <span class="vote-arrow down">▼</span>
+      </div>
+      <div class="post-main">
+        <div class="post-sub">Posted by <a>d.kira</a> in <a>r/GradLife</a> · Oct 8, 2024</div>
+        <div class="post-title">MSc while working part-time — survival tips?</div>
+        <div class="post-body-text">
+          Officially halfway through the first semester and I'm already questioning my life choices 😅 Part-time job + thesis prep + trying to maintain some semblance of a social life = the impossible triangle. How do people do this? I feel like I'm always behind on something. Any tips from survivors would be greatly appreciated.
+        </div>
+        <div class="post-actions-row">
+          <span class="post-action">💬 89 comments</span>
+          <span class="post-action">⇈ Share</span>
+          <span class="post-action">🔖 Save</span>
+        </div>
+        <div class="post-comments">
+          <div class="c-item">
+            <div class="c-user">gradschool_chaos</div>
+            <div class="c-body">Time blocking saved me. Thesis gets a 2h slot every morning before anything else — non-negotiable. Your brain stops fighting itself once it becomes a habit</div>
+            <div class="c-votes">▲ 47 · 1d ago</div>
+          </div>
+          <div class="c-item">
+            <div class="c-user">secondyear_survivor</div>
+            <div class="c-body">It genuinely gets better once you figure out your supervisor's communication style 😅 First semester is always the hardest. Hang in there!</div>
+            <div class="c-votes">▲ 29 · 20h ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-card">
+    <div class="clearfix">
+      <div class="vote-col">
+        <span class="vote-arrow up">▲</span>
+        <span class="vote-count">31</span>
+        <span class="vote-arrow down">▼</span>
+      </div>
+      <div class="post-main">
+        <div class="post-sub">Posted by <a>d.kira</a> in <a>r/netsec_gr</a> · Oct 29, 2024</div>
+        <div class="post-title">Anyone else going to the big security conference next week?</div>
+        <div class="post-body-text">
+          Super excited for this one — first time attending and the lineup looks genuinely great. I'm going to the Zappeion sessions on Nov 6 (the threat intel track especially). Anyone else from this community going? Would be great to finally meet some of you IRL instead of just online 👋
+        </div>
+        <div class="post-actions-row">
+          <span class="post-action">💬 14 comments</span>
+          <span class="post-action">⇈ Share</span>
+          <span class="post-action">🔖 Save</span>
+        </div>
+        <div class="post-comments">
+          <div class="c-item">
+            <div class="c-user">netsec_enthusiast</div>
+            <div class="c-body">Going to the day 2 sessions — the privacy & compliance panel looked really strong. DM if you want to grab coffee between talks 👋</div>
+            <div class="c-votes">▲ 9 · 2d ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size:13px; font-weight:700; color:#878A8C; margin: 20px 0 10px; padding-left: 4px;">COMMENTS (2)</div>
+
+  <div class="comment-card">
+    <div class="comment-header">
+      <a>d.kira</a> commented in <a>r/athens</a> · Sep 19, 2024
+    </div>
+    <div class="comment-context">
+      <div class="ctx-title">Is Exarcheia actually safe to live in? [r/athens]</div>
+      Moving to Athens for an MSc and considering Exarcheia for the rent prices. What's it actually like day-to-day?
+    </div>
+    <div class="comment-text">
+      Exarcheia gets a bad rep online but honestly it's one of the more genuine neighborhoods in the city. Been here almost two years and the community feel is unlike anywhere else — know most of the people in my building, local cafés have regulars, it's quite alive. The noise can be a thing on weekends but you get used to it. Rent is decent for how central it is too.
+    </div>
+    <div class="comment-meta"><span class="upvote-count">▲ 88</span> &nbsp;·&nbsp; Sep 19, 2024</div>
+  </div>
+
+  <div class="comment-card">
+    <div class="comment-header">
+      <a>d.kira</a> commented in <a>r/aueb_students</a> · Oct 15, 2024
+    </div>
+    <div class="comment-context">
+      <div class="ctx-title">Thesis supervisor assignment — is the department coordinator helpful? [r/aueb_students]</div>
+      Anyone know if you can contact them directly or do you need to go through the portal?
+    </div>
+    <div class="comment-text">
+      I had the exact same issue last semester. Email the department coordinator directly — they respond within a day or two usually, and they're pretty helpful. Don't bother waiting for the portal to update, it's always delayed. Good luck!
+    </div>
+    <div class="comment-meta"><span class="upvote-count">▲ 14</span> &nbsp;·&nbsp; Oct 15, 2024</div>
+  </div>
+
+</div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <div class="profile-card">
+    <div class="profile-banner"></div>
+    <div class="profile-body">
+      <div class="profile-avatar-row">
+        <div class="profile-avatar">DK</div>
+      </div>
+      <div class="profile-name">d.kira</div>
+      <div class="profile-handle">u/d.kira</div>
+      <div class="profile-bio">Athens-based. Into security, grad life, and good coffee. She/her.</div>
+      <div class="profile-stats">
+        <div class="ps-item"><div class="ps-num">234</div><div class="ps-label">Karma</div></div>
+        <div class="ps-item"><div class="ps-num">4</div><div class="ps-label">Posts</div></div>
+        <div class="ps-item"><div class="ps-num">Aug '23</div><div class="ps-label">Joined</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <h4>About Agora</h4>
+    A simulated community forum. All users and posts are fictional and exist only within the lab environment.
+  </div>
+</div>
+
+</div>
+</body>
+</html>

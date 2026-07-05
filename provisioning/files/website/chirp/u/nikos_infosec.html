@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="nikos_infosec">
+  <title>Nikos I. (@nikos_infosec) / Chirp</title>
+  <link rel="stylesheet" href="../chirp.css">
+</head>
+<body>
+
+<div class="nav">
+  <a class="nav-logo" href="../index.html">🐦 Chirp</a>
+  <div class="search-wrap">
+    <input class="search-input" type="text" placeholder="Search Chirp" onkeydown="if(event.key==='Enter'){location.href='../index.html?q='+encodeURIComponent(this.value)}">
+  </div>
+  <a class="nav-back" href="../../index.html">← Lab</a>
+</div>
+
+<div class="page">
+  <div class="cover"></div>
+  <div class="profile-section">
+    <div class="avatar-row">
+      <div class="avatar" style="background:#2196F3">NI</div>
+      <button class="follow-btn">Follow</button>
+    </div>
+    <div class="display-name">Nikos I.</div>
+    <div class="username">@nikos_infosec</div>
+    <div class="bio">SOC analyst by day. Threat intel nerd always. Opinions my own, IOCs in my heart.</div>
+    <div class="meta-row">
+      <span class="meta-item">📍 Athens</span>
+      <span class="meta-item">📅 Joined October 2018</span>
+    </div>
+    <div class="stats-row">
+      <span><span class="stat-num">511</span> <span class="stat-label">Following</span></span>
+      <span><span class="stat-num">1830</span> <span class="stat-label">Followers</span></span>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active">Posts</div>
+    <div class="tab">Replies</div>
+    <div class="tab">Media</div>
+    <div class="tab">Likes</div>
+  </div>
+
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Nikos I.</span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 6</span>
+      </div>
+      <div class="post-text">the threat intel panel was incredible. already counting down to next year 🙌</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 4</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 28</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Nikos I.</span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 4</span>
+      </div>
+      <div class="post-text">if you still parse logs by hand in 2024 I respect the grind but please let a tool help you</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 11</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 73</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Nikos I.</span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 27</span>
+      </div>
+      <div class="post-text">phishing kit reuse is wild — same template, three different &#x27;banks&#x27;, one lazy actor</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 19</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 61</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Nikos I.</span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 19</span>
+      </div>
+      <div class="post-text">reminder that attribution is hard and confidence levels exist for a reason</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 22</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 88</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Nikos I.</span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 10</span>
+      </div>
+      <div class="post-text">spent the afternoon writing detection rules that a rename will break tomorrow. such is life</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 2</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 34</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Nikos I.</span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 1</span>
+      </div>
+      <div class="post-text">new loader making the rounds. nothing fancy, just effective. patch your stuff folks</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 14</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 49</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Nikos I.</span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Sep 20</span>
+      </div>
+      <div class="post-text">the best OSINT tool is still patience and a spreadsheet, fight me</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 27</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 102</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Nikos I.</span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Sep 12</span>
+      </div>
+      <div class="post-text">every alert is urgent until you look at it. then it&#x27;s DNS. it&#x27;s always DNS</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 8</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 66</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Nikos I.</span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Sep 4</span>
+      </div>
+      <div class="post-text">back from leave to 4,000 alerts. missed you too, SIEM</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 1</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 23</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Nikos I.</span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Aug 28</span>
+      </div>
+      <div class="post-text">CFP submitted 🤞 talk on tracking commodity malware if it gets in</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 3</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 31</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

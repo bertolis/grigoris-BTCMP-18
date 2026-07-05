@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="katerina_dev">
+  <title>Katerina D. (@katerina_dev) / Chirp</title>
+  <link rel="stylesheet" href="../chirp.css">
+</head>
+<body>
+
+<div class="nav">
+  <a class="nav-logo" href="../index.html">🐦 Chirp</a>
+  <div class="search-wrap">
+    <input class="search-input" type="text" placeholder="Search Chirp" onkeydown="if(event.key==='Enter'){location.href='../index.html?q='+encodeURIComponent(this.value)}">
+  </div>
+  <a class="nav-back" href="../../index.html">← Lab</a>
+</div>
+
+<div class="page">
+  <div class="cover"></div>
+  <div class="profile-section">
+    <div class="avatar-row">
+      <div class="avatar" style="background:#27AE60">KD</div>
+      <button class="follow-btn">Follow</button>
+    </div>
+    <div class="display-name">Katerina D.</div>
+    <div class="username">@katerina_dev</div>
+    <div class="bio">Frontend dev 🌐 React, coffee, and complaining about the metro. Athens.</div>
+    <div class="meta-row">
+      <span class="meta-item">📍 Athens</span>
+      <span class="meta-item">📅 Joined January 2020</span>
+    </div>
+    <div class="stats-row">
+      <span><span class="stat-num">402</span> <span class="stat-label">Following</span></span>
+      <span><span class="stat-num">690</span> <span class="stat-label">Followers</span></span>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active">Posts</div>
+    <div class="tab">Replies</div>
+    <div class="tab">Media</div>
+    <div class="tab">Likes</div>
+  </div>
+
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Katerina D.</span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 14</span>
+      </div>
+      <div class="post-text">knew you&#x27;d nail it 👏 some people just make hard things look easy</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 0</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 7</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Katerina D.</span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 8</span>
+      </div>
+      <div class="post-text">shipped a refactor that deleted 1,200 lines and added zero features. best day of my week honestly</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 6</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 58</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Katerina D.</span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 1</span>
+      </div>
+      <div class="post-text">hot take: most &#x27;urgent&#x27; tickets are just someone else&#x27;s lack of planning</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 14</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 91</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Katerina D.</span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 25</span>
+      </div>
+      <div class="post-text">trying tailwind again after swearing off it. we&#x27;ll see how long the peace lasts 🫠</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 1</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 23</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Katerina D.</span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 18</span>
+      </div>
+      <div class="post-text">the standup that could&#x27;ve been a message. every. single. morning.</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 3</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 44</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Katerina D.</span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 9</span>
+      </div>
+      <div class="post-text">girls who debug css at 1am we are not the same (we are exactly the same)</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 9</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 67</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Katerina D.</span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 2</span>
+      </div>
+      <div class="post-text">first carriage of the train is always less packed, genuinely changed my mornings</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 2</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 19</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Katerina D.</span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Sep 22</span>
+      </div>
+      <div class="post-text">spent two hours on a bug that was a typo. classic Sunday-brain on a Monday</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 0</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 12</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Katerina D.</span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Sep 15</span>
+      </div>
+      <div class="post-text">new monitor day 🖥️ my neck thanks me, my wallet does not</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 1</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 31</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Katerina D.</span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Sep 5</span>
+      </div>
+      <div class="post-text">back to the office routine. the espresso machine survived the summer, all is well</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 0</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 16</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

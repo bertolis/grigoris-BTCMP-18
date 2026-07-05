@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chirp — Explore</title>
+  <link rel="stylesheet" href="chirp.css">
+</head>
+<body>
+
+<div class="nav">
+  <a class="nav-logo" href="index.html">🐦 Chirp</a>
+  <div class="search-wrap">
+    <input id="q" class="search-input" type="text" placeholder="Search Chirp" autocomplete="off">
+  </div>
+  <a class="nav-back" href="../index.html">← Lab</a>
+</div>
+
+<div class="page">
+  <div class="page-head" id="head">Explore <small>What's happening across Chirp right now</small></div>
+
+  <div id="results" class="results" style="display:none;"></div>
+
+  <div id="feed">
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/katerina_dev.html">Katerina D.</a></span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 14</span>
+      </div>
+      <div class="post-text">knew you&#x27;d nail it 👏 some people just make hard things look easy</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 0</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 7</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#9B59B6">ST</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/stavros_t.html">Stavros T.</a></span>
+        <span class="post-handle">@stavros_t</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 13</span>
+      </div>
+      <div class="post-text">every single morning 😩 solidarity to everyone else packed onto this platform</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 0</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 9</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#C0392B">M</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/athens_metro_now.html">Athens Metro Updates</a></span>
+        <span class="post-handle">@athens_metro_now</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 13</span>
+      </div>
+      <div class="post-text">⚠️ Line 1: minor delays northbound this morning due to signalling works near the centre. Allow extra time.</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 28</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 34</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#E91E63">EM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/eleni_m.html">Eleni M.</a></span>
+        <span class="post-handle">@eleni_m</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 12</span>
+      </div>
+      <div class="post-text">hidden gem posts are the best posts on this platform honestly</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 0</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 8</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#E67E22">MG</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/mike_gk.html">Mike G.</a></span>
+        <span class="post-handle">@mike_gk</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 12</span>
+      </div>
+      <div class="post-text">excuse me where exactly 👀 need this location immediately</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 0</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 11</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#AF7AC5">Z</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/zoe_studies.html">Zoe</a></span>
+        <span class="post-handle">@zoe_studies</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 12</span>
+      </div>
+      <div class="post-text">thesis supervisor replied in under a day for once. framing this email</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 1</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 36</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#D35400">MK</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/maria_codes.html">Maria K.</a></span>
+        <span class="post-handle">@maria_codes</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 11</span>
+      </div>
+      <div class="post-text">first internship interview tomorrow and I have rewritten my intro 14 times 😭</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 1</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 33</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#1ABC9C">H</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/helena_ux.html">Helena</a></span>
+        <span class="post-handle">@helena_ux</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 11</span>
+      </div>
+      <div class="post-text">client feedback: &#x27;make it pop&#x27;. three words, infinite suffering</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 6</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 49</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/dev_dimitris.html">Dimitris</a></span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 10</span>
+      </div>
+      <div class="post-text">every timezone bug is a personal attack and I take them personally</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 9</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 62</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#34495E">GT</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/gr_techscene.html">GR Tech Scene</a></span>
+        <span class="post-handle">@gr_techscene</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 9</span>
+      </div>
+      <div class="post-text">The security event scene in Athens is having a moment. Three solid conferences this autumn alone. 📈</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 17</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 61</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/katerina_dev.html">Katerina D.</a></span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 8</span>
+      </div>
+      <div class="post-text">shipped a refactor that deleted 1,200 lines and added zero features. best day of my week honestly</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 6</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 58</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#C0392B">M</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/athens_metro_now.html">Athens Metro Updates</a></span>
+        <span class="post-handle">@athens_metro_now</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 8</span>
+      </div>
+      <div class="post-text">Service back to normal across all lines. Thanks for your patience this week.</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 9</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 21</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#E67E22">MG</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/mike_gk.html">Mike G.</a></span>
+        <span class="post-handle">@mike_gk</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 7</span>
+      </div>
+      <div class="post-text">controversial: the best gyros in Athens is not where the tourists think it is</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 18</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 92</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#8E44AD">CK</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/cyber_kate.html">Kate · cyberkate</a></span>
+        <span class="post-handle">@cyber_kate</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 7</span>
+      </div>
+      <div class="post-text">day 2 of the conference and the privacy &amp; compliance panel was the sleeper hit</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 6</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 44</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#9B59B6">ST</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/stavros_t.html">Stavros T.</a></span>
+        <span class="post-handle">@stavros_t</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 6</span>
+      </div>
+      <div class="post-text">they closed a whole lane on Mesogeion for &#x27;works&#x27; and there is not a single worker in sight</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 3</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 27</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/nikos_infosec.html">Nikos I.</a></span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 6</span>
+      </div>
+      <div class="post-text">the threat intel panel was incredible. already counting down to next year 🙌</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 4</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 28</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2C3E50">P</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/panos_sec.html">Panos</a></span>
+        <span class="post-handle">@panos_sec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 6</span>
+      </div>
+      <div class="post-text">great first day at the forum. the red team track did not disappoint 🔥</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 5</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 39</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#1D9BF0">AE</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/infosec_events_gr.html">Athens Infosec Events</a></span>
+        <span class="post-handle">@infosec_events_gr</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 5</span>
+      </div>
+      <div class="post-text">Reminder: the big one kicks off tomorrow morning. Doors 08:30. If you&#x27;re presenting in Hall A, tech check is at 08:00 🎤</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 12</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 41</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#E91E63">EM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/eleni_m.html">Eleni M.</a></span>
+        <span class="post-handle">@eleni_m</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 5</span>
+      </div>
+      <div class="post-text">kerning is the one thing I will lose sleep over and I&#x27;m not sorry</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 5</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 41</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#AF7AC5">Z</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/zoe_studies.html">Zoe</a></span>
+        <span class="post-handle">@zoe_studies</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 5</span>
+      </div>
+      <div class="post-text">the group project is going great if by great you mean I&#x27;m doing all of it</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 4</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 58</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2196F3">NI</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/nikos_infosec.html">Nikos I.</a></span>
+        <span class="post-handle">@nikos_infosec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 4</span>
+      </div>
+      <div class="post-text">if you still parse logs by hand in 2024 I respect the grind but please let a tool help you</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 11</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 73</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#D35400">MK</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/maria_codes.html">Maria K.</a></span>
+        <span class="post-handle">@maria_codes</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 4</span>
+      </div>
+      <div class="post-text">data structures exam done. recursion and I are no longer on speaking terms</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 2</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 41</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#1ABC9C">H</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/helena_ux.html">Helena</a></span>
+        <span class="post-handle">@helena_ux</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 4</span>
+      </div>
+      <div class="post-text">agency life: five projects, one designer, zero hours in the day</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 3</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 37</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/dev_dimitris.html">Dimitris</a></span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 3</span>
+      </div>
+      <div class="post-text">&#x27;it works on my machine&#x27; is not a deployment strategy, Kostas</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 11</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 71</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#8E44AD">CK</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/cyber_kate.html">Kate · cyberkate</a></span>
+        <span class="post-handle">@cyber_kate</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 2</span>
+      </div>
+      <div class="post-text">responsible disclosure is a two-way street. vendors, please staff your security@ inbox 🙏</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 31</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 118</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#27AE60">KD</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/katerina_dev.html">Katerina D.</a></span>
+        <span class="post-handle">@katerina_dev</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 1</span>
+      </div>
+      <div class="post-text">hot take: most &#x27;urgent&#x27; tickets are just someone else&#x27;s lack of planning</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 14</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 91</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#34495E">GT</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/gr_techscene.html">GR Tech Scene</a></span>
+        <span class="post-handle">@gr_techscene</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 1</span>
+      </div>
+      <div class="post-text">Hiring is picking back up — we tracked 40+ new security &amp; dev roles posted in October. Thread 🧵</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 9</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 44</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#C0392B">M</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/athens_metro_now.html">Athens Metro Updates</a></span>
+        <span class="post-handle">@athens_metro_now</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 31</span>
+      </div>
+      <div class="post-text">🚨 Reminder: 24h strike notice for next Tuesday. Lines 1, 2, 3 affected. Plan ahead.</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 64</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 88</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#E67E22">MG</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/mike_gk.html">Mike G.</a></span>
+        <span class="post-handle">@mike_gk</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 30</span>
+      </div>
+      <div class="post-text">found a bakery that does a proper bougatsa at 7am. life is good actually</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 3</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 47</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#2C3E50">P</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/panos_sec.html">Panos</a></span>
+        <span class="post-handle">@panos_sec</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 30</span>
+      </div>
+      <div class="post-text">client said &#x27;we&#x27;re confident in our security&#x27; so naturally we were in within the hour</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 22</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 96</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#9B59B6">ST</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/stavros_t.html">Stavros T.</a></span>
+        <span class="post-handle">@stavros_t</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 29</span>
+      </div>
+      <div class="post-text">the only good thing about the morning commute is the bakery at the station exit</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 0</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 14</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#E91E63">EM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name"><a href="u/eleni_m.html">Eleni M.</a></span>
+        <span class="post-handle">@eleni_m</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 28</span>
+      </div>
+      <div class="post-text">client: &#x27;can you make the logo bigger&#x27; / me, dying inside: &#x27;of course&#x27;</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 12</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 77</span>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script>
+const INDEX = [{"name": "D. Kira", "handle": "d.kira_online", "bio": "✍️ part-time digital work | MSc student | Athens 🇬🇷 | she/her", "initials": "DK", "color": "#4A90D9", "url": "u/d.kira_online.html"}, {"name": "Athens Infosec Events", "handle": "infosec_events_gr", "bio": "📡 Aggregating security meetups, CFPs and conferences across Greece. Not affiliated with any single event. DMs open for listings.", "initials": "AE", "color": "#1D9BF0", "url": "u/infosec_events_gr.html"}, {"name": "Katerina D.", "handle": "katerina_dev", "bio": "Frontend dev 🌐 React, coffee, and complaining about the metro. Athens.", "initials": "KD", "color": "#27AE60", "url": "u/katerina_dev.html"}, {"name": "Stavros T.", "handle": "stavros_t", "bio": "Civil engineer. Long commutes, longer opinions. 🚇", "initials": "ST", "color": "#9B59B6", "url": "u/stavros_t.html"}, {"name": "Nikos I.", "handle": "nikos_infosec", "bio": "SOC analyst by day. Threat intel nerd always. Opinions my own, IOCs in my heart.", "initials": "NI", "color": "#2196F3", "url": "u/nikos_infosec.html"}, {"name": "Eleni M.", "handle": "eleni_m", "bio": "Graphic designer 🎨 type nerd, plant collector, reluctant runner.", "initials": "EM", "color": "#E91E63", "url": "u/eleni_m.html"}, {"name": "Mike G.", "handle": "mike_gk", "bio": "Eating my way across Athens, one souvlaki at a time 🥙 reviews nobody asked for.", "initials": "MG", "color": "#E67E22", "url": "u/mike_gk.html"}, {"name": "Kate · cyberkate", "handle": "cyber_kate", "bio": "Security researcher 🔐 breaking things responsibly. she/her. views my own.", "initials": "CK", "color": "#8E44AD", "url": "u/cyber_kate.html"}, {"name": "Dimitris", "handle": "dev_dimitris", "bio": "Backend engineer. Go, Postgres, and strong opinions about timezones.", "initials": "DM", "color": "#16A085", "url": "u/dev_dimitris.html"}, {"name": "Athens Metro Updates", "handle": "athens_metro_now", "bio": "🚇 Unofficial community updates for the Athens metro & ISAP. Delays, strikes, works. Not operated by STASY.", "initials": "M", "color": "#C0392B", "url": "u/athens_metro_now.html"}, {"name": "GR Tech Scene", "handle": "gr_techscene", "bio": "Covering startups, hiring and events in the Greek tech & security scene. Newsletter weekly.", "initials": "GT", "color": "#34495E", "url": "u/gr_techscene.html"}, {"name": "Maria K.", "handle": "maria_codes", "bio": "CS undergrad 👩‍💻 learning in public. probably debugging right now.", "initials": "MK", "color": "#D35400", "url": "u/maria_codes.html"}, {"name": "Panos", "handle": "panos_sec", "bio": "Pentester. I break in so you don't get broken into. CTF on weekends.", "initials": "P", "color": "#2C3E50", "url": "u/panos_sec.html"}, {"name": "Zoe", "handle": "zoe_studies", "bio": "MSc grad student 📚 surviving on coffee and deadlines. occasional human.", "initials": "Z", "color": "#AF7AC5", "url": "u/zoe_studies.html"}, {"name": "Helena", "handle": "helena_ux", "bio": "Product designer at a small Athens agency. UX, coffee, and Figma autosave anxiety.", "initials": "H", "color": "#1ABC9C", "url": "u/helena_ux.html"}];
+const q = document.getElementById('q');
+const results = document.getElementById('results');
+const feed = document.getElementById('feed');
+const head = document.getElementById('head');
+
+function avatar(a) {
+  return '<div class="result-av" style="background:'+a.color+'">'+a.initials+'</div>';
+}
+
+function runSearch(term) {
+  term = (term||'').trim().toLowerCase();
+  if (!term) {
+    results.style.display='none'; feed.style.display='';
+    head.innerHTML = "Explore <small>What's happening across Chirp right now</small>";
+    return;
+  }
+  feed.style.display='none'; results.style.display='';
+  head.innerHTML = 'Search <small>Results for &ldquo;'+term.replace(/</g,'&lt;')+'&rdquo;</small>';
+  const hits = INDEX.filter(a =>
+    a.handle.toLowerCase().includes(term) ||
+    a.name.toLowerCase().includes(term) ||
+    a.bio.toLowerCase().includes(term)
+  );
+  if (!hits.length) {
+    results.innerHTML = '<div class="no-results">No accounts found for &ldquo;'+term.replace(/</g,'&lt;')+'&rdquo;.<br>Try the exact username you were given.</div>';
+    return;
+  }
+  results.innerHTML = hits.map(a =>
+    '<a class="result" href="'+a.url+'">'+avatar(a)+
+    '<div class="result-info"><div class="result-name">'+a.name+'</div>'+
+    '<div class="result-handle">@'+a.handle+'</div>'+
+    '<div class="result-bio">'+a.bio+'</div></div>'+
+    '<button class="result-follow" onclick="event.preventDefault();">Follow</button></a>'
+  ).join('');
+}
+
+q.addEventListener('input', e => runSearch(e.target.value));
+
+// Support ?q= deep-links from profile-page search boxes.
+const params = new URLSearchParams(location.search);
+if (params.get('q')) { q.value = params.get('q'); runSearch(q.value); }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+/* Athens Infosec Forum 2024 — event site styles (fictional, lab use only) */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #1a2332;
+  background: #ffffff;
+  line-height: 1.6;
+}
+a { color: #0a6cff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* TOP BAR */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: #0b1b3a;
+  border-bottom: 1px solid #142952;
+}
+.topbar .container { display: flex; align-items: center; height: 64px; gap: 28px; }
+.brand { display: flex; align-items: center; gap: 10px; color: #fff; font-weight: 800; font-size: 18px; letter-spacing: -0.3px; }
+.brand .logo {
+  width: 30px; height: 30px; border-radius: 7px;
+  background: linear-gradient(135deg, #00e0c6, #0a6cff);
+  display: flex; align-items: center; justify-content: center;
+  color: #03132e; font-weight: 900; font-size: 15px;
+}
+.brand small { display:block; font-weight: 500; font-size: 10px; color: #7fa8e0; letter-spacing: 1px; }
+.nav-links { display: flex; gap: 22px; margin-left: auto; }
+.nav-links a { color: #cdd9ee; font-size: 14px; font-weight: 600; }
+.nav-links a:hover { color: #fff; text-decoration: none; }
+.nav-links a.active { color: #00e0c6; }
+.nav-cta {
+  background: #00e0c6; color: #03132e !important; padding: 8px 16px;
+  border-radius: 6px; font-weight: 700; font-size: 14px;
+}
+.nav-cta:hover { background: #2bf0d8; text-decoration: none; }
+
+/* HERO */
+.hero {
+  background: radial-gradient(900px 400px at 80% -10%, #143a78 0%, transparent 60%), #0b1b3a;
+  color: #fff; padding: 84px 0 72px;
+}
+.hero .eyebrow { color: #00e0c6; font-weight: 700; letter-spacing: 2px; font-size: 13px; text-transform: uppercase; }
+.hero h1 { font-size: 54px; line-height: 1.05; margin: 14px 0 18px; letter-spacing: -1.5px; font-weight: 900; }
+.hero .lede { font-size: 19px; color: #c6d4ec; max-width: 640px; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14);
+  padding: 10px 16px; border-radius: 999px; font-size: 14px; color: #e8eefb; font-weight: 600;
+}
+.hero-actions { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+.btn {
+  display: inline-block; padding: 13px 26px; border-radius: 8px; font-weight: 700; font-size: 15px;
+}
+.btn-primary { background: #00e0c6; color: #03132e; }
+.btn-primary:hover { background: #2bf0d8; text-decoration: none; }
+.btn-ghost { border: 1px solid rgba(255,255,255,0.3); color: #fff; }
+.btn-ghost:hover { border-color: #fff; text-decoration: none; }
+
+/* SECTIONS */
+section { padding: 64px 0; }
+section.alt { background: #f5f8fd; }
+.section-head { text-align: center; max-width: 680px; margin: 0 auto 44px; }
+.section-head .eyebrow { color: #0a6cff; font-weight: 700; letter-spacing: 2px; font-size: 12px; text-transform: uppercase; }
+.section-head h2 { font-size: 34px; margin: 8px 0 12px; letter-spacing: -0.8px; }
+.section-head p { color: #51607a; font-size: 17px; }
+
+/* FEATURE GRID */
+.grid { display: grid; gap: 22px; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.card {
+  background: #fff; border: 1px solid #e4eaf3; border-radius: 12px; padding: 24px;
+}
+.card h3 { font-size: 19px; margin-bottom: 8px; }
+.card p { color: #51607a; font-size: 15px; }
+.card .tag {
+  display: inline-block; font-size: 12px; font-weight: 700; color: #0a6cff;
+  background: #eaf2ff; padding: 3px 10px; border-radius: 6px; margin-bottom: 12px;
+}
+
+/* AGENDA */
+.day-tabs { display: flex; gap: 10px; justify-content: center; margin-bottom: 32px; }
+.day-tab { padding: 10px 22px; border: 1px solid #d6e0ef; border-radius: 8px; font-weight: 700; color: #1a2332; background:#fff; }
+.day-tab.active { background: #0b1b3a; color: #fff; border-color: #0b1b3a; }
+.schedule { max-width: 820px; margin: 0 auto; }
+.slot { display: flex; gap: 22px; padding: 18px 0; border-bottom: 1px solid #e4eaf3; }
+.slot .time { flex: 0 0 110px; color: #0a6cff; font-weight: 700; font-size: 14px; }
+.slot .what h4 { font-size: 17px; margin-bottom: 3px; }
+.slot .what .track { font-size: 13px; color: #8a97ad; font-weight: 600; }
+.slot .what .who { font-size: 14px; color: #51607a; margin-top: 4px; }
+.slot.keynote { background: #f5f8fd; border-radius: 10px; padding: 18px; }
+
+/* SPEAKERS */
+.speaker { text-align: center; }
+.speaker .avatar {
+  width: 96px; height: 96px; border-radius: 50%; margin: 0 auto 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px; font-weight: 800; color: #fff;
+}
+.speaker h3 { font-size: 18px; }
+.speaker .role { color: #8a97ad; font-size: 14px; font-weight: 600; }
+.speaker .talk { color: #51607a; font-size: 14px; margin-top: 8px; font-style: italic; }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+/* VENUE */
+.venue-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: start; }
+.map-embed {
+  width: 100%; height: 320px; border-radius: 12px; border: 1px solid #e4eaf3;
+  background: linear-gradient(135deg,#e8eef7,#d7e2f0);
+  display: flex; align-items: center; justify-content: center; color: #6b7894; font-weight: 600;
+}
+.info-list { list-style: none; }
+.info-list li { padding: 12px 0; border-bottom: 1px solid #e4eaf3; }
+.info-list li strong { display: block; font-size: 13px; color: #8a97ad; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* CTA BAND */
+.cta-band { background: #0b1b3a; color: #fff; text-align: center; }
+.cta-band h2 { font-size: 32px; margin-bottom: 10px; }
+.cta-band p { color: #c6d4ec; margin-bottom: 24px; }
+
+/* FOOTER */
+footer { background: #07142b; color: #8ba0c4; padding: 40px 0; font-size: 14px; }
+footer .container { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; }
+footer .disclaimer { font-size: 12px; color: #5a6f93; max-width: 520px; }
+
+@media (max-width: 820px) {
+  .grid-3, .grid-4, .grid-2, .venue-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 38px; }
+  .nav-links { display: none; }
+}

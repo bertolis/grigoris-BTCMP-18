@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="dev_dimitris">
+  <title>Dimitris (@dev_dimitris) / Chirp</title>
+  <link rel="stylesheet" href="../chirp.css">
+</head>
+<body>
+
+<div class="nav">
+  <a class="nav-logo" href="../index.html">🐦 Chirp</a>
+  <div class="search-wrap">
+    <input class="search-input" type="text" placeholder="Search Chirp" onkeydown="if(event.key==='Enter'){location.href='../index.html?q='+encodeURIComponent(this.value)}">
+  </div>
+  <a class="nav-back" href="../../index.html">← Lab</a>
+</div>
+
+<div class="page">
+  <div class="cover"></div>
+  <div class="profile-section">
+    <div class="avatar-row">
+      <div class="avatar" style="background:#16A085">DM</div>
+      <button class="follow-btn">Follow</button>
+    </div>
+    <div class="display-name">Dimitris</div>
+    <div class="username">@dev_dimitris</div>
+    <div class="bio">Backend engineer. Go, Postgres, and strong opinions about timezones.</div>
+    <div class="meta-row">
+      <span class="meta-item">📍 Thessaloniki</span>
+      <span class="meta-item">📅 Joined July 2019</span>
+    </div>
+    <div class="stats-row">
+      <span><span class="stat-num">210</span> <span class="stat-label">Following</span></span>
+      <span><span class="stat-num">430</span> <span class="stat-label">Followers</span></span>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active">Posts</div>
+    <div class="tab">Replies</div>
+    <div class="tab">Media</div>
+    <div class="tab">Likes</div>
+  </div>
+
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Dimitris</span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 10</span>
+      </div>
+      <div class="post-text">every timezone bug is a personal attack and I take them personally</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 9</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 62</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Dimitris</span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Nov 3</span>
+      </div>
+      <div class="post-text">&#x27;it works on my machine&#x27; is not a deployment strategy, Kostas</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 11</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 71</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Dimitris</span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 24</span>
+      </div>
+      <div class="post-text">rewrote a 2s query to 20ms. nobody will notice but I will know</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 3</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 48</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Dimitris</span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 15</span>
+      </div>
+      <div class="post-text">naming things, cache invalidation, and explaining microservices to my mum</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 6</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 55</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Dimitris</span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Oct 6</span>
+      </div>
+      <div class="post-text">ORMs are great until the exact moment they are catastrophic</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 4</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 39</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Dimitris</span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Sep 27</span>
+      </div>
+      <div class="post-text">on-call week. praying to the uptime gods 🙏</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 0</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 23</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Dimitris</span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Sep 18</span>
+      </div>
+      <div class="post-text">the docs lied. the docs always lie</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 8</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 67</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Dimitris</span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Sep 9</span>
+      </div>
+      <div class="post-text">moved a service to Go and my latency graphs look like a cliff. chef&#x27;s kiss</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 2</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 44</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Dimitris</span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Sep 3</span>
+      </div>
+      <div class="post-text">back from leave, 200 PRs to review, send help and snacks</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 0</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 18</span>
+      </div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-avatar" style="background:#16A085">DM</div>
+    <div class="post-body">
+      <div class="post-header">
+        <span class="post-name">Dimitris</span>
+        <span class="post-handle">@dev_dimitris</span>
+        <span class="post-dot">·</span>
+        <span class="post-time">Aug 27</span>
+      </div>
+      <div class="post-text">summer side project: a tiny key-value store nobody needs including me</div>
+
+      <div class="post-actions">
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 0</span>
+        <span class="action"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg> 1</span>
+        <span class="action heart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> 31</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

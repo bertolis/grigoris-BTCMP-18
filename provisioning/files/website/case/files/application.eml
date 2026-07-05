@@ -1,0 +1,41 @@
+Received: from smtp55.mail.ru (smtp55.mail.ru [217.69.139.55])
+        by mx.meridian-analytics.com (Postfix) with ESMTPS
+        id 9F2A7C1B0E; Mon, 09 Jun 2025 18:44:12 +0300
+Received: from mail.ru (webmail-prod-07.mail.ru [217.69.139.207])
+        by smtp55.mail.ru (Postfix) with ESMTP
+        id 4C1D8E6A22; Mon, 09 Jun 2025 18:44:09 +0300
+Received: from [10.14.7.22] (unknown [10.14.7.22])
+        by mail.ru (Postfix) with ESMTPA
+        id 1B7F3D9C55; Mon, 09 Jun 2025 18:44:07 +0300
+From: Daniel Vos <daniel.vos.sec@protonmail.com>
+To: recruiting@meridian-analytics.com
+Date: Mon, 09 Jun 2025 18:44:07 +0300
+Message-ID: <a7f3c91e2b@mail.ru>
+X-Mailer: Mail.Ru Web Agent 2.14
+Subject: Application — Threat Intelligence Analyst position
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Dear Meridian Analytics Hiring Team,
+
+I am writing to apply for the Threat Intelligence Analyst position advertised on
+your careers page. Please find my CV attached.
+
+I am a results-driven security professional with over a decade of experience
+defending enterprise networks against advanced persistent threats. My work spans
+threat intelligence, incident response, and security architecture, and I am
+passionate about turning raw indicators into actionable intelligence that protects
+the organisations I serve.
+
+Most recently I worked as a security contractor with Northwind Security BV here in
+Amsterdam, where I led threat-hunting engagements for financial-sector clients. I am
+available immediately and would welcome the opportunity to discuss how I can
+contribute to your team.
+
+You can find more about my work on my profile (username dvos_sec) and my portfolio
+at dvos-sec.example.
+
+Kind regards,
+Daniel Vos
+Amsterdam, Netherlands
+daniel.vos.sec@protonmail.com
