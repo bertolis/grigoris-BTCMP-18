@@ -30,6 +30,19 @@
         state: present
         update_cache: 'yes'
 
+    # ── Module 5 (Image & Media OSINT) local files ──
+    # Not web-served: the images are placed in the analyst's home directory so
+    # students navigate to ~/Module_5 and examine the files locally (exiftool etc.).
+    # Runs after the user-access role, so /home/user already exists.
+    - name: Deploy Module 5 image files to the analyst home directory
+      ansible.builtin.copy:
+        src: files/module5/
+        dest: /home/user/Module_5/
+        owner: user
+        group: user
+        mode: '0644'
+        directory_mode: '0755'
+
   roles:
     - role: user-access
       user_access_username: user

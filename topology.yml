@@ -1,7 +1,7 @@
 name: grigoris-test
 hosts:
   - name: vm1
-    flavor: standard.large
+    flavor: c2_r4_d40
     base_box:
       image: xubuntu-noble-x86_64
       mgmt_user: ubuntu

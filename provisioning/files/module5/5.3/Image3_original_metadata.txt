@@ -1,0 +1,75 @@
+File Size                       : 3.8 MB
+File Permissions                : -rw-rw-rw-
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+Exif Byte Order                 : Little-endian (Intel, II)
+Orientation                     : Rotate 90 CW
+X Resolution                    : 72
+Y Resolution                    : 72
+Resolution Unit                 : inches
+Modify Date                     : 2025:11:08 19:31:37
+Y Cb Cr Positioning             : Centered
+Exposure Time                   : 1/25
+F Number                        : 1.8
+Exposure Program                : Program AE
+ISO                             : 400
+Exif Version                    : 0220
+Date/Time Original              : 2025:11:08 19:31:37
+Create Date                     : 2025:11:08 19:31:37
+Offset Time                     : +02:00
+Offset Time Original            : +02:00
+Shutter Speed Value             : 1
+Aperture Value                  : 1.8
+Exposure Compensation           : 0
+Max Aperture Value              : 1.8
+Metering Mode                   : Center-weighted average
+Flash                           : No Flash
+Focal Length                    : 5.5 mm
+Sub Sec Time                    : 482
+Sub Sec Time Original           : 482
+Sub Sec Time Digitized          : 482
+Flashpix Version                : 0100
+Color Space                     : Uncalibrated
+Exif Image Width                : 4080
+Exif Image Height               : 3060
+Exposure Mode                   : Auto
+White Balance                   : Auto
+Digital Zoom Ratio              : 1
+Focal Length In 35mm Format     : 23 mm
+Scene Capture Type              : Standard
+Compression                     : JPEG (old-style)
+Thumbnail Offset                : 822
+Thumbnail Length                : 54022
+Color Space Data                : RGB
+Primary Platform                : Unknown (SEC)
+CMM Flags                       : Not Embedded, Independent
+Rendering Intent                : Perceptual
+Connection Space Illuminant     : 0.9642 1 0.82491
+Media White Point               : 0.9642 1 0.82491
+Chromatic Adaptation            : 1.04781 0.02289 -0.05013 0.02954 0.99048 -0.01704 -0.00923 0.01505 0.75214
+Red Matrix Column               : 0.51508 0.24117 -0.00105
+Green Matrix Column             : 0.29195 0.69223 0.04189
+Blue Matrix Column              : 0.15718 0.06659 0.78455
+Red Tone Reproduction Curve     : (Binary data 32 bytes, use -b option to extract)
+Green Tone Reproduction Curve   : (Binary data 32 bytes, use -b option to extract)
+Blue Tone Reproduction Curve    : (Binary data 32 bytes, use -b option to extract)
+Image Width                     : 4080
+Image Height                    : 3060
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
+Time Stamp                      : 2025:11:08 19:31:37.482+02:00
+Aperture                        : 1.8
+Image Size                      : 4080x3060
+Megapixels                      : 12.5
+Scale Factor To 35 mm Equivalent: 4.2
+Shutter Speed                   : 1/25
+Thumbnail Image                 : (Binary data 54022 bytes, use -b option to extract)
+Circle Of Confusion             : 0.007 mm
+Field Of View                   : 76.1 deg
+Focal Length                    : 5.5 mm (35 mm equivalent: 23.0 mm)
+Hyperfocal Distance             : 2.36 m
+Light Value                     : 4.3
+
