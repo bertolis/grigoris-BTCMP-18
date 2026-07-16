@@ -30,6 +30,53 @@
         state: present
         update_cache: 'yes'
 
+
+    - name: Create Polkit rule to disable colord password prompts
+      ansible.builtin.copy:
+        content: |
+          polkit.addRule(function(action, subject) {
+              if ((action.id == "org.freedesktop.color-manager.create-device" ||
+                   action.id == "org.freedesktop.color-manager.create-profile" ||
+                   action.id == "org.freedesktop.color-manager.delete-device" ||
+                   action.id == "org.freedesktop.color-manager.delete-profile" ||
+                   action.id == "org.freedesktop.color-manager.modify-device" ||
+                   action.id == "org.freedesktop.color-manager.modify-profile") &&
+                  subject.isInGroup("user")) {
+                  return polkit.Result.YES;
+              }
+          });
+        dest: "/etc/polkit-1/rules.d/45-allow-colord.rules"
+        mode: '0644'
+
+
+# 2. Apply high-DPI scaling (written directly to xfconf config file,
+    #    picked up automatically next time the XFCE session starts —
+    #    no live D-Bus session required during provisioning)
+    - name: Ensure xfconf config directory exists
+      ansible.builtin.file:
+        path: /home/user/.config/xfce4/xfconf/xfce-perchannel-xml
+        state: directory
+        owner: user
+        group: user
+        mode: '0755'
+        recurse: true
+
+    - name: Set XFCE DPI to 170
+      ansible.builtin.copy:
+        dest: /home/user/.config/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+        owner: user
+        group: user
+        mode: '0644'
+        content: |
+          <?xml version="1.0" encoding="UTF-8"?>
+
+          <channel name="xsettings" version="1.0">
+            <property name="Xft" type="empty">
+              <property name="DPI" type="int" value="170"/>
+            </property>
+          </channel>
+
+
     # ── Module 5 (Image & Media OSINT) local files ──
     # Not web-served: the images are placed in the analyst's home directory so
     # students navigate to ~/Module_5 and examine the files locally (exiftool etc.).
@@ -141,3 +188,27 @@
       user_access_username: user
       user_access_password: Password123
       user_access_sudo: true
+
+    - name: Disable unattended apt upgrades
+      hosts: vm1,vm2,man,router
+      become: true
+      tasks:
+        - name: Disable unattended upgrades in apt periodic config
+          copy:
+            dest: /etc/apt/apt.conf.d/20auto-upgrades
+            owner: root
+            group: root
+            mode: "0644"
+            content: |
+              APT::Periodic::Update-Package-Lists "0";
+              APT::Periodic::Unattended-Upgrade "0";
+
+    - name: Disable apt daily timers
+      systemd:
+        name: "{{ item }}"
+        state: stopped
+        enabled: false
+        masked: true
+      loop:
+        - apt-daily.timer
+        - apt-daily-upgrade.timer
